@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="/Users/mwho/Code/Android/TrickPlaybackDemo/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="c82741bc129dd5f99f11a4ab8666ae24262053b6">
+        <dex dex="/Users/mwho/Code/Android/TrickPlaybackDemo/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_0d1ab4c33d11cba658d4b5e13a54c23e47d540bd/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/mwho/Code/Android/TrickPlaybackDemo/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="ef8263654e7240021c427a76a1cc4a180cd09866">
+        <dex dex="/Users/mwho/Code/Android/TrickPlaybackDemo/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_6db2c7cb9ba08c5a0e5524817976f9dbb0ff57a1/classes.dex" />
+    </item>
+
+</items>

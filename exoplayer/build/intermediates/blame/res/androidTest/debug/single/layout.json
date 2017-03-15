@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/Users/mwho/Code/Android/TrickPlaybackDemo/exoplayer/build/intermediates/res/merged/androidTest/debug/layout/exo_playback_control_view.xml",
+        "source": "/Users/mwho/Code/Android/TrickPlaybackDemo/exoplayer/build/intermediates/bundles/debug/res/layout/exo_playback_control_view.xml"
+    },
+    {
+        "merged": "/Users/mwho/Code/Android/TrickPlaybackDemo/exoplayer/build/intermediates/res/merged/androidTest/debug/layout/exo_simple_player_view.xml",
+        "source": "/Users/mwho/Code/Android/TrickPlaybackDemo/exoplayer/build/intermediates/bundles/debug/res/layout/exo_simple_player_view.xml"
+    }
+]

@@ -1,0 +1,26 @@
+[
+    {
+        "merged": "/Users/mwho/Code/Android/TrickPlaybackDemo/exoplayer/build/intermediates/res/merged/androidTest/debug/drawable-anydpi-v21/exo_controls_rewind.xml",
+        "source": "/Users/mwho/Code/Android/TrickPlaybackDemo/exoplayer/build/intermediates/bundles/debug/res/drawable-anydpi-v21/exo_controls_rewind.xml"
+    },
+    {
+        "merged": "/Users/mwho/Code/Android/TrickPlaybackDemo/exoplayer/build/intermediates/res/merged/androidTest/debug/drawable-anydpi-v21/exo_controls_play.xml",
+        "source": "/Users/mwho/Code/Android/TrickPlaybackDemo/exoplayer/build/intermediates/bundles/debug/res/drawable-anydpi-v21/exo_controls_play.xml"
+    },
+    {
+        "merged": "/Users/mwho/Code/Android/TrickPlaybackDemo/exoplayer/build/intermediates/res/merged/androidTest/debug/drawable-anydpi-v21/exo_controls_pause.xml",
+        "source": "/Users/mwho/Code/Android/TrickPlaybackDemo/exoplayer/build/intermediates/bundles/debug/res/drawable-anydpi-v21/exo_controls_pause.xml"
+    },
+    {
+        "merged": "/Users/mwho/Code/Android/TrickPlaybackDemo/exoplayer/build/intermediates/res/merged/androidTest/debug/drawable-anydpi-v21/exo_controls_fastforward.xml",
+        "source": "/Users/mwho/Code/Android/TrickPlaybackDemo/exoplayer/build/intermediates/bundles/debug/res/drawable-anydpi-v21/exo_controls_fastforward.xml"
+    },
+    {
+        "merged": "/Users/mwho/Code/Android/TrickPlaybackDemo/exoplayer/build/intermediates/res/merged/androidTest/debug/drawable-anydpi-v21/exo_controls_next.xml",
+        "source": "/Users/mwho/Code/Android/TrickPlaybackDemo/exoplayer/build/intermediates/bundles/debug/res/drawable-anydpi-v21/exo_controls_next.xml"
+    },
+    {
+        "merged": "/Users/mwho/Code/Android/TrickPlaybackDemo/exoplayer/build/intermediates/res/merged/androidTest/debug/drawable-anydpi-v21/exo_controls_previous.xml",
+        "source": "/Users/mwho/Code/Android/TrickPlaybackDemo/exoplayer/build/intermediates/bundles/debug/res/drawable-anydpi-v21/exo_controls_previous.xml"
+    }
+]
