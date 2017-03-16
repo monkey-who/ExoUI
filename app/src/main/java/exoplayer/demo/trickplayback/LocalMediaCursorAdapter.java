@@ -36,7 +36,7 @@ public class LocalMediaCursorAdapter extends CursorAdapter {
 
     @Override
     public void bindView(View view, Context context, Cursor cursor) {
-        ImageView thumbnail = (ImageView) view.findViewById(R.id.thumbnail);
+        final ImageView thumbnail = (ImageView) view.findViewById(R.id.thumbnail);
         TextView name = (TextView) view.findViewById(R.id.video_name);
         TextView resolution = (TextView) view.findViewById(R.id.video_resolution);
         TextView duration = (TextView) view.findViewById(R.id.video_duration);

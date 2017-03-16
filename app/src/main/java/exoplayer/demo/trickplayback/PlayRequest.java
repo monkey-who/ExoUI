@@ -1,5 +1,6 @@
 package exoplayer.demo.trickplayback;
 
+import android.content.Intent;
 import android.net.Uri;
 
 /**
@@ -8,4 +9,5 @@ import android.net.Uri;
 
 public interface PlayRequest {
     void play(Uri uri);
+    void play(Intent intent);
 }

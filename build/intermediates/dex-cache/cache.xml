@@ -11,6 +11,15 @@
         <dex dex="/Users/mwho/Code/Android/TrickPlaybackDemo/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_0d1ab4c33d11cba658d4b5e13a54c23e47d540bd/classes.dex" />
     </item>
     <item
+        is-multidex="false"
+        jar="/Users/mwho/Code/Android/TrickPlaybackDemo/exoplayer/build/intermediates/bundles/default/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="e1988e2c77588bfb887b844497e873aea41344ea">
+        <dex dex="/Users/mwho/Code/Android/TrickPlaybackDemo/app/build/intermediates/pre-dexed/debug/classes_92ae1866d19be4719de47133eea3fda51e1aeae1.jar" />
+    </item>
+    <item
         is-multidex="true"
         jar="/Users/mwho/Code/Android/TrickPlaybackDemo/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
         jumboMode="true"

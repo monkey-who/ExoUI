@@ -135,11 +135,6 @@ public class PlayerActivity extends AppCompatActivity
         simpleExoPlayerView.setControllerVisibilityListener(this);
         simpleExoPlayerView.requestFocus();
 
-        /** added for chooser dialog */
-        mChooserDialog = new ChooserDialog(this);
-        mAdapter = new LocalMediaCursorAdapter(this, null, 0, this);
-        getSupportLoaderManager().initLoader(0 /*id*/, null /*args*/, this);
-
         View chooseButton = findViewById(R.id.choose_file);
         chooseButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -148,6 +143,14 @@ public class PlayerActivity extends AppCompatActivity
                     mChooserDialog.show();
             }
         });
+    }
+
+    /** added for chooser dialog */
+    private void showChooserAtBeginning() {
+        mChooserDialog = new ChooserDialog(this);
+        mChooserDialog.setCallback(this);
+        mAdapter = new LocalMediaCursorAdapter(this, null, 0, this);
+        getSupportLoaderManager().initLoader(0 /*id*/, null /*args*/, this);
         try {
             mChooserDialog.show();
         } catch (Exception e) { e.printStackTrace();}
@@ -197,6 +200,7 @@ public class PlayerActivity extends AppCompatActivity
     public void onRequestPermissionsResult(int requestCode, String[] permissions,
                                            int[] grantResults) {
         if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+            showChooserAtBeginning();
             initializePlayer();
         } else {
             showToast(R.string.storage_permission_denied);
@@ -233,7 +237,7 @@ public class PlayerActivity extends AppCompatActivity
 
     @Override
     public void onVisibilityChange(int visibility) {
-        debugRootView.setVisibility(visibility);
+//        debugRootView.setVisibility(visibility);
     }
 
     // Internal methods
@@ -618,12 +622,20 @@ public class PlayerActivity extends AppCompatActivity
         initializePlayer(intent);
     }
 
+    public void play(Intent intent) {
+        mChooserDialog.dismiss();
+        releasePlayer();
+
+        initializePlayer(intent);
+    }
+
     private final int PERMISSIONS_REQUEST_WRITE_EXTERNAL_STORAGE = 13;
     private void requestPermissions() {
         boolean readable = (PackageManager.PERMISSION_GRANTED ==
                 ContextCompat.checkSelfPermission(
                         this, Manifest.permission.READ_EXTERNAL_STORAGE)) ;
         if (readable ) {
+            showChooserAtBeginning();
         } else {
             if (ActivityCompat.shouldShowRequestPermissionRationale(this,
                     Manifest.permission.READ_EXTERNAL_STORAGE)) {
