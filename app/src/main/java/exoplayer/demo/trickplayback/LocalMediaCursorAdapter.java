@@ -8,6 +8,7 @@ import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.provider.MediaStore;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -21,6 +22,7 @@ import android.widget.TextView;
 
 public class LocalMediaCursorAdapter extends CursorAdapter {
 
+    public static final String TAG = "LocalMediaAdapter";
     private ContentResolver mResolver;
     private PlayRequest mCallback;
     public LocalMediaCursorAdapter(Context context, Cursor c, int flags, PlayRequest callback) {
@@ -34,8 +36,9 @@ public class LocalMediaCursorAdapter extends CursorAdapter {
         return LayoutInflater.from(context).inflate(R.layout.item_local_media, parent, false);
     }
 
+    private View mLastView;
     @Override
-    public void bindView(View view, Context context, Cursor cursor) {
+    public void bindView(final View view, Context context, Cursor cursor) {
         final ImageView thumbnail = (ImageView) view.findViewById(R.id.thumbnail);
         TextView name = (TextView) view.findViewById(R.id.video_name);
         TextView resolution = (TextView) view.findViewById(R.id.video_resolution);
@@ -52,7 +55,10 @@ public class LocalMediaCursorAdapter extends CursorAdapter {
 
         final int videoId = cursor.getInt(videoIdIdx);
 
-        new ThumbnailTask().execute(thumbnail, videoId);
+        if (view != mLastView) {
+            mLastView = view;
+            new ThumbnailTask().execute(thumbnail, videoId);
+        }
 
         view.setOnClickListener(new View.OnClickListener() {
             @Override
